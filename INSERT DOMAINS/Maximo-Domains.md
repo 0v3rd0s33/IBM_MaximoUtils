@@ -18,10 +18,12 @@ Each section will provide an example of how to insert the respective domain type
 ALNDOMAIN
 To insert a domain of type ALNDOMAIN, execute the following SQL statement:
 
-sql
-Copy code
+
+```
 INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID)
 VALUES ('POC', '1234', 'example', '', '', ALNDOMAINSEQ.NEXTVAL, 'POC|1234');
+```
+
 Note: In the above example, the SITEID and ORGID fields are left empty. However, you can fill them by enclosing their values in quotation marks within the INSERT statement.
 
 To retrieve the sequence ID for ALNDOMAIN, use the following SQL query:
