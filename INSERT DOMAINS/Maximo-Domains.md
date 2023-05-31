@@ -21,22 +21,25 @@ To insert a domain of type ALNDOMAIN, execute the following SQL statement:
 
 ```
 INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID)
-VALUES ('POC', '1234', 'example', '', '', ALNDOMAINSEQ.NEXTVAL, 'POC|1234');
+VALUES ('EXAMPLEDOMAIN', '1234', 'example', '', '', ALNDOMAINSEQ.NEXTVAL, 'POC|1234');
 ```
 
-Note: In the above example, the SITEID and ORGID fields are left empty. However, you can fill them by enclosing their values in quotation marks within the INSERT statement.
+Note: In the above example, EXAMPLEDOMAIN is the name of the domain that SOULD exist in maximo and where you want to insert the value,  the SITEID and ORGID fields are left empty. However, you can fill them by enclosing their values in quotation marks within the INSERT statement.
 
 To retrieve the sequence ID for ALNDOMAIN, use the following SQL query:
 
-sql
-Copy code
+```
 SELECT * FROM MAXSEQUENCE WHERE NAME LIKE '%ALNDOMAIN%';
+```
+
 Excel Integration
 To integrate the ALNDOMAIN insert into Excel for multiple inserts, use the following formula:
 
-excel
-Copy code
-POC --> ="INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID) VALUES ('ECIINMCODMT', '"&A2&"', '"&B2&"', '', '', ALNDOMAINSEQ.NEXTVAL, 'ECIINMCODMT|"&A2&"');"
+
+```
+ ="INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID) VALUES ('EXAMPLEDOMAIN', '"&A2&"', '"&B2&"', '', '', ALNDOMAINSEQ.NEXTVAL, 'EXAMPLEDOMAIN|"&A2&"');"
+```
+
 Replace the values in cell A2 and B2 with the respective domain values in Excel, and the formula will generate the corresponding insert statement.
 
 SYNONYMDOMAIN
