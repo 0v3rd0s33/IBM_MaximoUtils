@@ -11,12 +11,11 @@ Summary
 ==
 The following domain types will be covered in this document:
 
-
- [ALNDOMAIN](#ALNDOMAIN)
- [SYNONYMDOMAIN](#SYNONYMDOMAIN)
- [TABLE](#TABLE)
- [NUMERIC](#NUMERIC)
- [CROSSOVER](#CROSSOVER)
+[ALNDOMAIN](#ALNDOMAIN)  
+[SYNONYMDOMAIN](#SYNONYMDOMAIN)  
+[TABLE](#TABLE)  
+[NUMERIC](#NUMERIC)  
+[CROSSOVER](#CROSSOVER)
 
 Each section will provide an example of how to insert the respective domain type.
 
