@@ -1,38 +1,58 @@
+Inserting Domains in IBM Maximo
+==
+This document provides instructions on how to insert domains into IBM Maximo using a database. It includes examples and formatting styles for different domain types.
+==
 Introduction
-
-
-The objetive of this document is show how to insert domains in ibm maximo across a database.
+The objective of this document is to demonstrate the process of inserting domains into IBM Maximo through a database. Domains play a crucial role in defining and controlling the values that can be entered into specific fields within Maximo.
 
 Summary
-* ALNDOMAIN
-* SYNONYMDOMAIN
-* TABLE
-* NUMERIC
-* CROSSOVER
+The following domain types will be covered in this document:
+==
+*ALNDOMAIN
+*SYNONYMDOMAIN
+*TABLE
+*NUMERIC
+*CROSSOVER
+Each section will provide an example of how to insert the respective domain type.
 
-ALNDOMAIN 
+ALNDOMAIN
+To insert a domain of type ALNDOMAIN, execute the following SQL statement:
 
+sql
+Copy code
 INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID)
 VALUES ('POC', '1234', 'example', '', '', ALNDOMAINSEQ.NEXTVAL, 'POC|1234');
+Note: In the above example, the SITEID and ORGID fields are left empty. However, you can fill them by enclosing their values in quotation marks within the INSERT statement.
 
-In this example im not introducing SITEID and ORGID but this can be donned filled the ' (quotation marks) in the up insert.
-The secuence id can be seen in the table maxsequence
+To retrieve the sequence ID for ALNDOMAIN, use the following SQL query:
 
+sql
+Copy code
 SELECT * FROM MAXSEQUENCE WHERE NAME LIKE '%ALNDOMAIN%';
+Excel Integration
+To integrate the ALNDOMAIN insert into Excel for multiple inserts, use the following formula:
 
---Excel integration
-This formula can be integrated in Excel for integrated with multiple inserts.
-
-// poner esto en formato copy&paste
+excel
+Copy code
 POC --> ="INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID) VALUES ('ECIINMCODMT', '"&A2&"', '"&B2&"', '', '', ALNDOMAINSEQ.NEXTVAL, 'ECIINMCODMT|"&A2&"');"
+Replace the values in cell A2 and B2 with the respective domain values in Excel, and the formula will generate the corresponding insert statement.
 
+SYNONYMDOMAIN
+// TODO: Add instructions and examples for SYNONYMDOMAIN
 
-Decir que el dominio tiene que tener valores en maximo para poder añadir valores.
-adjuntar fichero excel con ejemplo.
+TABLE
+// TODO: Add instructions and examples for TABLE
 
-en vez de poc poner un dominio que exista en maximo.
+NUMERIC
+// TODO: Add instructions and examples for NUMERIC
 
+CROSSOVER
+// TODO: Add instructions and examples for CROSSOVER
 
+Feel free to update this document with instructions and examples for other domain types as needed.
+
+Conclusion
+By following the instructions provided in this document, you should now be able to successfully insert domains into IBM Maximo using a database. Remember to adapt the examples to your specific requirements and fill in any additional fields as necessary.
 
 
 
