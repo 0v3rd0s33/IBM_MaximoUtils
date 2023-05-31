@@ -11,15 +11,16 @@ Summary
 ==
 The following domain types will be covered in this document:
 
-* ALNDOMAIN
-* SYNONYMDOMAIN
-* TABLE
-* NUMERIC
-* CROSSOVER
+
+ [ALNDOMAIN](#ALNDOMAIN)
+ [SYNONYMDOMAIN](#SYNONYMDOMAIN)
+ [TABLE](#TABLE)
+ [NUMERIC](#NUMERIC)
+ [CROSSOVER](#CROSSOVER)
 
 Each section will provide an example of how to insert the respective domain type.
 
-ALNDOMAIN
+## ALNDOMAIN
 To insert a domain of type ALNDOMAIN, execute the following SQL statement:
 
 
@@ -46,16 +47,16 @@ To integrate the ALNDOMAIN insert into Excel for multiple inserts, use the follo
 
 Replace the values in cell A2 and B2 with the respective domain values in Excel, and the formula will generate the corresponding insert statement.
 
-SYNONYMDOMAIN
+## SYNONYMDOMAIN
 // TODO: Add instructions and examples for SYNONYMDOMAIN
 
-TABLE
+## TABLE
 // TODO: Add instructions and examples for TABLE
 
-NUMERIC
+## NUMERIC
 // TODO: Add instructions and examples for NUMERIC
 
-CROSSOVER
+## CROSSOVER
 // TODO: Add instructions and examples for CROSSOVER
 
 Feel free to update this document with instructions and examples for other domain types as needed.
