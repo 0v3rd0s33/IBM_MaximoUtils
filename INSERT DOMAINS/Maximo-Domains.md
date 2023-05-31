@@ -21,7 +21,7 @@ To insert a domain of type ALNDOMAIN, execute the following SQL statement:
 
 ```
 INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID)
-VALUES ('EXAMPLEDOMAIN', '1234', 'example', '', '', ALNDOMAINSEQ.NEXTVAL, 'POC|1234');
+VALUES ('EXAMPLEDOMAIN', '1234', 'example', '', '', ALNDOMAINSEQ.NEXTVAL, 'EXAMPLEDOMAIN|1234');
 ```
 
 Note: In the above example, EXAMPLEDOMAIN is the name of the domain that SOULD exist in maximo and where you want to insert the value,  the SITEID and ORGID fields are left empty. However, you can fill them by enclosing their values in quotation marks within the INSERT statement.
