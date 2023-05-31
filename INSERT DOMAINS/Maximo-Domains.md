@@ -39,6 +39,7 @@ SELECT * FROM MAXSEQUENCE WHERE NAME LIKE '%ALNDOMAIN%';
 Excel Integration
 To integrate the ALNDOMAIN insert into Excel for multiple inserts, use the following formula:
 
+<!-- ponemos ``` [tres comillas izquierdas] para indicar que es ub bloque de codigo -->
 
 ```
  ="INSERT INTO ALNDOMAIN (DOMAINID, VALUE, DESCRIPTION, SITEID, ORGID, ALNDOMAINID, VALUEID) VALUES ('EXAMPLEDOMAIN', '"&A2&"', '"&B2&"', '', '', ALNDOMAINSEQ.NEXTVAL, 'EXAMPLEDOMAIN|"&A2&"');"
@@ -63,7 +64,12 @@ Feel free to update this document with instructions and examples for other domai
 Conclusion
 By following the instructions provided in this document, you should now be able to successfully insert domains into IBM Maximo using a database. Remember to adapt the examples to your specific requirements and fill in any additional fields as necessary.
 
+<!--
+Empezamos comentario usando <!--
+
 *************************** BRAIN STORMING ************************
 
-Crear nombre Global para un dominio.
+Crear nombre Global para un dominio.  
 Explicar las relaciones de maximo (OBJETO de origen.. etc).
+
+cerramos el comentario con -->
